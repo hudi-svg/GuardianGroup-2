@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Guardian Group connects attorneys with medical record analysis, physician reports, and expert testimony.">
+  <title>The Guardian Group | Medical Intelligence Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#11110f;--ink2:#171715;--gold:#c9a064;--gold2:#e2bf82;--cream:#eee7dc;--muted:#bdb5a9;--line:rgba(201,160,100,.42)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:var(--cream);font-family:Inter,Arial,sans-serif}
+    .serif{font-family:'Cormorant Garamond',Georgia,serif}
+    .page-shell{min-height:100svh;display:flex;flex-direction:column;overflow:hidden;position:relative;background:radial-gradient(ellipse at 78% 8%,rgba(137,95,43,.17),transparent 35%),radial-gradient(ellipse at 0% 92%,rgba(112,83,47,.18),transparent 27%),linear-gradient(120deg,#11110f 0%,#171715 52%,#10100f 100%)}
+    .page-shell:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+    .site-header,.intro,.portals,.site-footer{position:relative;z-index:1}
+    .site-header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 clamp(22px,6.8vw,112px)}
+    .brand{display:flex;align-items:center;gap:15px;text-decoration:none;color:var(--cream)}
+    .brand img{width:auto;height:46px;max-width:150px;object-fit:contain}
+    .brand-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(17px,1.6vw,24px);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+    .qme{border:1px solid var(--gold);color:var(--gold2);padding:13px 25px;font-size:12px;letter-spacing:.15em;text-decoration:none;transition:background .25s,color .25s}
+    .qme:hover{background:var(--gold);color:#15130f}
+    .intro{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,.85fr);gap:clamp(32px,6vw,92px);align-items:center;padding:clamp(40px,5.4vh,70px) clamp(22px,6.8vw,112px) clamp(36px,5vh,60px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold2);font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:19px}
+    .eyebrow:before{content:"";display:block;width:48px;height:1px;background:var(--gold)}
+    h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.15vw,65px);line-height:.98;letter-spacing:-.025em;margin:0;max-width:900px}
+    .intro-aside{border-left:1px solid var(--gold);padding:3px 0 3px 30px;max-width:340px}
+    .intro-aside p{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(18px,1.55vw,23px);line-height:1.35;margin:0 0 20px;color:#e6ded2}
+    .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-style:italic;color:var(--gold2);line-height:1.25}
+    .quote small{display:block;font-size:17px;font-style:normal;margin-top:5px}
+    .portals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:0 clamp(22px,6.8vw,112px);margin-top:0;flex:1}
+    .portal{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:390px;padding:30px 30px 24px;border:1px solid rgba(201,160,100,.6);color:var(--cream);text-decoration:none;overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;background:#171715}
+    .portal:before{content:"";position:absolute;inset:0;z-index:-2;transition:transform .65s ease,opacity .4s ease;opacity:.8}
+    .portal:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,10,11,.35) 0%,rgba(12,12,11,.6) 42%,rgba(12,12,11,.97) 100%)}
+    .portal:hover,.portal:focus-visible{transform:translateY(-5px);border-color:var(--gold2);box-shadow:0 18px 55px rgba(0,0,0,.28);outline:none}
+    .portal:hover:before,.portal:focus-visible:before{transform:scale(1.06);opacity:1}
+   
+.portal-merlin:before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 15, 22, 0.35),
+      rgba(8, 12, 14, 0.92)
+    ),
+    url("images/merlyn-image.PNG") center / cover no-repeat;
+}
+
+.portal-medical:before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30, 19, 10, 0.35),
+      rgba(12, 11, 10, 0.92)
+    ),
+    url("images/medical-image.PNG") center / cover no-repeat;
+}
+
+.portal-civil:before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 19, 20, 0.35),
+      rgba(10, 11, 11, 0.92)
+    ),
+    url("images/civil-image.PNG") center / cover no-repeat;
+}
+
+    .portal-top{display:flex;justify-content:space-between;align-items:center;color:var(--gold2);font-size:10px;letter-spacing:.2em;text-transform:uppercase;gap:12px}
+    .arrow{font-size:22px;line-height:1;transition:transform .25s ease}
+    .portal:hover .arrow{transform:translate(3px,-3px)}
+    .logo-slot{height:118px;display:flex;align-items:center;margin:13px 0 8px}
+    .logo-slot img{display:block;width:auto;max-width:min(100%,250px);max-height:60px;object-fit:contain;object-position:left center}
+    .portal-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.portal-logo {
+  display: block;
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+    .portal-medical .logo-slot img{max-width:min(100%,260px);max-height:300px}
+    .portal-civil .logo-slot img{max-width:min(100%,235px);max-height:150px}
+    .portal h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(27px,2.25vw,37px);font-weight:500;line-height:1.02;margin:0 0 16px;max-width:330px}
+    .portal-copy{font-size:13px;line-height:1.65;color:#e1dcd4;max-width:390px;margin:0 0 24px}
+    .portal-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:14px;color:var(--gold2);font-size:11px}
+    .portal-bottom .domain{border-bottom:1px solid rgba(226,191,130,.6);padding-bottom:4px;overflow-wrap:anywhere}
+    .portal-bottom .cta{white-space:nowrap}
+    .site-footer{margin:26px clamp(22px,6.8vw,112px) 0;border-top:1px solid var(--line);min-height:62px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#a9a196;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+    .site-footer span:last-child{text-align:right}
+    
+    @media(min-width:1441px){.portal{min-height:420px}.intro{padding-top:66px;padding-bottom:58px}}
+    @media(max-width:1100px){.intro{grid-template-columns:1.3fr .8fr;gap:36px}.portals{gap:14px}.portal{padding:24px 20px 20px;min-height:405px}.portal-copy{font-size:12px}.portal-bottom{font-size:10px;flex-wrap:wrap}.logo-slot{height:100px}}
+    @media(max-width:760px){.page-shell{min-height:100svh;overflow:visible}.site-header{height:74px;padding:0 20px}.brand{gap:10px}.brand img{height:38px;max-width:48px}.brand-name{font-size:15px;letter-spacing:.08em}.qme{padding:10px 13px;font-size:10px}.intro{grid-template-columns:1fr;gap:25px;padding:43px 22px 34px}.eyebrow{font-size:9px;margin-bottom:15px}.eyebrow:before{width:32px}h1{font-size:clamp(39px,10vw,58px);line-height:1}.intro-aside{max-width:none;padding-left:18px}.intro-aside p{font-size:20px;margin-bottom:13px}.quote{font-size:19px}.quote small{font-size:15px}.portals{grid-template-columns:1fr;padding:20px 20px 0;gap:14px}.portal{min-height:370px;padding:25px 24px 22px}.portal h2{font-size:34px}.portal-copy{font-size:13px}.logo-slot{height:92px;margin:9px 0 10px}.site-footer{margin:23px 22px 0;padding:18px 0;align-items:flex-start;flex-direction:column;gap:9px;line-height:1.6}.site-footer span:last-child{text-align:left}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="The Guardian Group home">
+        <!-- Replace with the parent brand's exact logo filename. -->
+        <img src="guardiangroup-logo.png" alt="The Guardian Group logo" onerror="this.style.display='none'">
+       <!-- <span class="brand-name">The Guardian Group</span>-->
+      </a>
+      <!-- QME destination has not been confirmed. Keep this as a non-navigating placeholder. -->
+      <a class="qme" href="#qme" id="qmeButton" aria-label="QME link to be confirmed">QME ↗</a>
+    </header>
+
+    <section class="intro" id="top" aria-labelledby="main-title">
+      <div>
+        <div class="eyebrow">The Guardian Group</div>
+        <h1 id="main-title">For the attorneys who rely on medical insight and testimony.</h1>
+      </div>
+      <aside class="intro-aside">
+        <p>Medical Intelligence Services — record analysis, physician reports, and expert testimony.</p>
+        <div class="quote">Knowledge itself is power.<small>— Francis Bacon</small></div>
+      </aside>
+    </section>
+
+    <nav class="portals" aria-label="Explore Guardian Group services">
+      <a class="portal portal-merlin" href="https://www.merlin.law" target="_blank" rel="noopener noreferrer" aria-label="Explore Merlin website">
+        <div class="portal-top"><span>01 / Record Intelligence</span><span class="arrow" aria-hidden="true">↗</span></div>
+        <div class="portal-logo-wrap">
+  <img src="merlin.png" alt="Merlin" class="portal-logo merlin-logo pt-10 pb-10">
+</div>
+        <h2>Merlin</h2>
+        <p class="portal-copy">Physician-grade command of the complete record. The whole production, read and analyzed. Not just a chronology.</p>
+        <div class="portal-bottom"><span class="domain">merlin.law</span><span class="cta">Explore Merlin →</span></div>
+      </a>
+
+      <a class="portal portal-medical" href="https://www.guardianadvisory.group" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Guardian Medical Advisory">
+        <div class="portal-top"><span>02 / Medical Opinion</span><span class="arrow" aria-hidden="true">↗</span></div>
+        <div class="logo-slot">
+          <!-- Replace filename only if your original logo has a different name. -->
+          <img src="Medical Advisory Bronze 2 - Transparent (1).png" alt="Guardian Medical Advisory logo" onerror="this.style.display='none'">
+        </div>
+        <h2>Guardian Medical Advisory</h2>
+        <p class="portal-copy">Substantiated medicine for the cases that settle. Lower-cost generalist medical opinion on causation, future care, and other areas of dispute.</p>
+        <div class="portal-bottom"><span class="domain">guardianadvisory.group</span><span class="cta">Learn more →</span></div>
+      </a>
+
+      <a class="portal portal-civil" href="https://www.guardiancivil.services" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Guardian Civil Services">
+        <div class="portal-top"><span>03 / Expert Testimony</span><span class="arrow" aria-hidden="true">↗</span></div>
+        <div class="logo-slot">
+          <!-- Replace filename only if your original logo has a different name. -->
+          <img src="Civil Services White-Transparent (1).png" alt="Guardian Civil Services logo" onerror="this.style.display='none'">
+        </div>
+        <h2>Guardian Civil Services</h2>
+        <p class="portal-copy">Board-certified specialists who hold up under challenge. Retained experts for trial cases and independent evaluations.</p>
+        <div class="portal-bottom"><span class="domain">guardiancivil.services</span><span class="cta">Learn more →</span></div>
+      </a>
+    </nav>
+
+    <footer class="site-footer">
+      <span>The Guardian Group · Medical Intelligence Services</span>
+      <span>Three companies. Direct access to the right expertise.</span>
+    </footer>
+  </main>
+  <script>
+    // QME is intentionally inactive until the client confirms its destination.
+    document.getElementById('qmeButton').addEventListener('click', function(event) {
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
